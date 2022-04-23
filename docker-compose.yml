@@ -1,0 +1,24 @@
+version: '2.1'
+services: 
+    db:
+        container_name: db_derco
+        image: mysql:8
+        environment: 
+            MYSQL_ROOT_PASSWORD: "prueba_tecnicas"
+            MYSQL_DATABASE: "db_data"
+#        volumes:
+#             - "/home/DP/5. DataBase/project_qin/database/:/var/lib/mysql"
+##            - "/home/user/ArchivosPc/DP/Qin/Project_ALL/database:/var/lib/mysql"
+        ports:
+            - "3306:3306"
+        networks: 
+         vpcbr:
+           ipv4_address: "172.30.0.3"           
+    
+networks: 
+  vpcbr:
+    driver: bridge
+    ipam:
+     config: 
+       - subnet: "172.30.0.0/24"
+         gateway: "172.30.0.1"
