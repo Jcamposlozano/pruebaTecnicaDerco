@@ -1,0 +1,11 @@
+INSTALACIONES
+
+npm i typescript -D
+npx tsx compilador de typescrip
+npm i express mysql
+npm i @types/express -D
+npm i nodemon -D
+npm i concurrently -D
+npm i @types/mysql -D
+npm i mysql2
+npm i types/mysql2 -D

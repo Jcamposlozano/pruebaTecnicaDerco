@@ -7,17 +7,10 @@ from datetime import date
 class Db_datos():
 
     def __init__(self):
-        #self.DB_HOST = os.environ['DB_HOST']
-        #self.DB_USER = os.environ['DB_USER'] 
-        #self.DB_PASS = os.environ['DB_PASS'] 
-        #self.DB_NAME = os.environ['DB_NAME']
         self.DB_HOST = 'localhost' 
         self.DB_USER = 'root'
         self.DB_PASS = 'prueba_tecnicas'
         self.DB_NAME = 'db_data'
-        #`analytics_prod_schema`
-        #`analytics_dev_schema`
-        #`analytics_stg_schema`
         
     def run_query(self, query=''): 
         con = pymysql.connect(host=self.DB_HOST,
